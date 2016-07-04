@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matress King | Каталог</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/components/accordion.min.css">
+  <link rel="stylesheet" href="css/components/sticky.min.css">
+  <link rel="stylesheet" href="css/components/slideshow.min.css">
+  <link rel="stylesheet" href="css/components/slider.min.css">
+  <link rel="stylesheet" href="css/components/slidenav.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="decorative-line"></div>
+  <div class="uk-container uk-container-center">
+    <a href="index.html"><img src="img/logo.png" alt="Лого" class="header__logo"></a>
+    <div class="navbar-and-contacts-col">
+      <div class="contacts">
+        <span class="address">ТЦ «Армада» 4 блок</span>
+        <span><a href="tel:+7 778 584 80 46">+7 (778) 584 80 46</a></span>
+        <span><a href="tel:+7 778 883 44 40">+7 (778) 883 44 40</a></span>
+        <span><a href="tel:+7 707 704 43 00">+7 (707) 704 43 00</a></span>
+      </div>
+
+      <nav class="uk-navbar">
+        <ul class="uk-navbar-nav uk-hidden-small">
+          <li><a href="index.html#home" >Начало</a></li>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="index.html#advantages">Наши приемущества</a></li>
+          <li><a href="index.html#promotions">Акции</a></li>
+          <li><a href="index.html#goods">Продукция</a></li>
+          <li><a href="index.html#catalog">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="#my-id" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+      </nav>
+
+      <div id="my-id" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+          <ul class="uk-nav uk-nav-offcanvas">
+            <li><a href="index.html#home">Начало</a></li>
+            <li><a href="index.html#about">О нас</a></li>
+            <li><a href="index.html#advantages">Наши приемущества</a></li>
+            <li><a href="index.html#promotions">Акции</a></li>
+            <li><a href="index.html#goods">Продукция</a></li>
+            <li><a href="index.html#catalog">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<h2 class="uk-text-center">Каталог</h2>
+<div class="catalog-page uk-container uk-container-center">
+
+  <div class="uk-text-center">
+    <!-- This is a button toggling the off-canvas sidebar -->
+    <button class="uk-visible-small choose-category" data-uk-offcanvas="{target:'#catalogOffCanvas'}">Выбрать
+      категорию
+    </button>
+  </div>
+
+  <div class="uk-grid">
+    <div class="uk-width-medium-1-4 filter uk-hidden-small">
+      <div class="heading"><p>Акции</p></div>
+      <div class="uk-accordion" data-uk-accordion="{collapse: false}">
+        <!--li с классом "active" - текущий(выделенный) товар-->
+        <h3 class="uk-accordion-title">Категория 1</h3>
+        <div class="uk-accordion-content">
+          <ul>
+            <li><a href="#">Товар 1</a></li>
+            <li  class="active"><a href="#">Товар 2</a></li>
+            <li><a href="#">Товар 3</a></li>
+            <li><a href="#">Товар 4</a></li>
+          </ul>
+        </div>
+
+        <h3 class="uk-accordion-title">Категория 2</h3>
+        <div class="uk-accordion-content">
+          <ul>
+            <li><a href="#">Товар 1</a></li>
+            <li><a href="#">Товар 2</a></li>
+            <li><a href="#">Товар 3</a></li>
+            <li><a href="#">Товар 4</a></li>
+          </ul>
+        </div>
+
+        <h3 class="uk-accordion-title">Категория 3</h3>
+        <div class="uk-accordion-content">
+          <ul>
+            <li><a href="#">Товар 1</a></li>
+            <li><a href="#">Товар 2</a></li>
+            <li><a href="#">Товар 3</a></li>
+            <li><a href="#">Товар 4</a></li>
+          </ul>
+        </div>
+
+        <h3><a href="#">Катег. без дропдауна</a></h3>
+        <h3><a href="#">Катег. без дропдауна 2</a></h3>
+
+      </div>
+    </div>
+    <div class="uk-width-medium-3-4 product-list">
+      <ul class="uk-grid uk-grid-width-large-1-3 uk-grid-width-medium-1-2 uk-grid-width-1-1">
+        <li>
+          <div class="border">
+            <img src="img/goods_example1.jpg">
+            <h3>Название товара</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p><a href="single-product.html">Подробнее</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="border">
+            <img src="img/goods_example2.jpg">
+            <h3>Название товара 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p><a href="single-product.html">Подробнее</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="border">
+            <img src="img/goods_example3.jpg">
+            <h3>Название товара 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p><a href="single-product.html">Подробнее</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="border">
+            <img src="img/goods_example4.jpg">
+            <h3>Название товара 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p><a href="single-product.html">Подробнее</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="border">
+            <img src="img/goods_example5.jpg">
+            <h3>Название товара 5</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p><a href="single-product.html">Подробнее</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="border">
+            <img src="img/goods_example1.jpg">
+            <h3>Название товара</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <p><a href="single-product.html">Подробнее</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ul class="uk-pagination uk-pagination-right">
+    <li><a href=""><i class="uk-icon-angle-double-left"></i></a></li>
+    <li class="uk-active"><span>1</span></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href=""><i class="uk-icon-angle-double-right"></i></a></li>
+  </ul>
+
+</div>
+
+<div id="catalogOffCanvas" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar filter on-off-canvas">
+    <div class="heading on-off-canvas"><p>Акции</p></div>
+    <div class="uk-accordion" data-uk-accordion="{collapse: false}">
+      <!--li с классом "active" - текущий(выделенный) товар-->
+      <h3 class="uk-accordion-title">Категория 1</h3>
+      <div class="uk-accordion-content">
+        <ul>
+          <li><a href="#">Товар 1</a></li>
+          <li  class="active"><a href="#">Товар 2</a></li>
+          <li><a href="#">Товар 3</a></li>
+          <li><a href="#">Товар 4</a></li>
+        </ul>
+      </div>
+
+      <h3 class="uk-accordion-title">Категория 2</h3>
+      <div class="uk-accordion-content">
+        <ul>
+          <li><a href="#">Товар 1</a></li>
+          <li><a href="#">Товар 2</a></li>
+          <li><a href="#">Товар 3</a></li>
+          <li><a href="#">Товар 4</a></li>
+        </ul>
+      </div>
+
+      <h3 class="uk-accordion-title">Категория 3</h3>
+      <div class="uk-accordion-content">
+        <ul>
+          <li><a href="#">Товар 1</a></li>
+          <li><a href="#">Товар 2</a></li>
+          <li><a href="#">Товар 3</a></li>
+          <li><a href="#">Товар 4</a></li>
+        </ul>
+      </div>
+
+      <h3><a href="#">Катег. без дропдауна</a></h3>
+      <h3><a href="#">Катег. без дропдауна 2</a></h3>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-flex uk-container uk-container-center">
+    <a href="index.html"><img src="img/footer_logo.png" alt="Лого"></a>
+    <div class="map">
+      <script type="text/javascript" charset="utf-8" async
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fyycaM9ARr4kPXttQAeX7dWrevcM_1oN&width=100%&height=300&lang=ru_RU&sourceType=constructor"></script>
+    </div>
+    <div class="contacts">
+      <h3>Наши контакты</h3>
+
+      <p>г.Алматы ул. Кабдолова (Маречека) 1/8 , уг. ул. Саина
+        ТЦ «Армада» 4 блок</p>
+
+      <p><a href="tel:+7 778 584 80 46">+7 (778) 584 80 46</a> <br>
+        <a href="tel:+7 778 883 44 40">+7 (778) 883 44 40</a> <br>
+        <a href="tel:+7 707 704 43 00">+7 (707) 704 43 00</a></p>
+
+      <p><a href="mailto:m.matras@mail.ru">m.matras@mail.ru</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Off-canvas для Каталога -->
+
+
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/uikit.min.js"></script>
+<script src="js/components/accordion.js"></script>
+<script src="js/components/sticky.min.js"></script>
+<script src="js/components/slideshow.min.js"></script>
+<script src="js/components/slider.min.js"></script>
+<script src="js/components/lightbox.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
