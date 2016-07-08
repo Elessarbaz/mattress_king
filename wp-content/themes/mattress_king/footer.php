@@ -34,8 +34,8 @@
 </script>
 <script src="https://bsh.su/client/script/GET/"></script>
 
-<?=get_field('google',5)?>
-<?=get_field('yandex',5)?>
+<?=get_field('google',4)?>
+<?=get_field('yandex',4)?>
 <?php wp_footer() ?>
 </body>
 </html>

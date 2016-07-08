@@ -24,17 +24,36 @@ get_header(); ?>
 				категорию
 			</button>
 		</div>
-
+		<?php
+		$args = array(
+			'type'         => 'post',
+			'child_of'     => '',
+			'parent'       => 5,
+			'orderby'      => 'name',
+			'order'        => 'ASC',
+			'hide_empty'   => 1,
+			'hierarchical' => 1,
+			'exclude'      => '',
+			'include'      => '',
+			'number'       => 0,
+			'taxonomy'     => 'category',
+			'pad_counts'   => false,
+			// полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+		);
+		$categories = get_categories( $args );
+		//print_r($categories);
+		?>
 		<div class="uk-grid">
 			<div class="uk-width-medium-1-4 filter uk-hidden-small">
 				<div class="heading"><p>Акции</p></div>
 				<div class="uk-accordion" data-uk-accordion="{collapse: false}">
 					<!--li с классом "active" - текущий(выделенный) товар-->
 					<?php
-					$args=array('category_name'=>'promotions','order'=>'ASC', 'orderby'=>'id', 'numberposts'=>-1 );
+					foreach ($categories as $category):
+					$args=array('category_name'=>$category->slug,'order'=>'ASC', 'orderby'=>'id', 'numberposts'=>-1 );
 					$posts=get_posts($args);
 					?>
-					<h3 class="uk-accordion-title">Категория 1</h3>
+					<h3 class="uk-accordion-title"><?=$category->name?></h3>
 
 					<div class="uk-accordion-content">
 						<ul>
@@ -46,6 +65,7 @@ get_header(); ?>
 							<?php endforeach; wp_reset_query();?>
 						</ul>
 					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 			<div class="uk-width-medium-3-4 product-list">
