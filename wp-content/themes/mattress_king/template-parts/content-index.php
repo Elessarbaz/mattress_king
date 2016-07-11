@@ -37,16 +37,16 @@
 <!--НАЧАЛО about-->
 <?php $about=get_post(31); ?>
 <div class="about uk-container uk-container-center" id="about">
-	<div class="uk-grid">
-		<div class="uk-width-medium-6-10">
-			<img src="<?=get_the_post_thumbnail_url($about->ID)?>" alt="Матрац">
+	<div>
+		<!--<div class="uk-width-medium-6-10">
+			<img src="<?/*=get_the_post_thumbnail_url($about->ID)*/?>" alt="Матрац">
 		</div>
 		<div class="uk-width-medium-4-10 uk-text-center">
-			<h2><?=get_the_title($about->ID)?></h2>
+			<h2><?/*=get_the_title($about->ID)*/?></h2>-->
 			<article>
-			<p><?= do_shortcode($about->post_content,true) ?></p>
+			<?= do_shortcode($about->post_content,true) ?>
 			</article>
-		</div>
+<!--		</div>-->
 	</div>
 </div>
 <!--КОНЕЦ about-->
@@ -77,15 +77,17 @@
 	</div>
 </div>
 <!--КОНЕЦ advantages-->
-
+<?php $args=array('category_name'=>'promotions','order'=>'ASC', 'orderby'=>'id', 'numberposts'=>-1 );
+$posts=get_posts($args);
+if($posts):
+?>
 <!--НАЧАЛО promotions-->
 <div class="promotions" id="promotions">
 	<div class="uk-container uk-container-center">
 		<div class="uk-slidenav-position" data-uk-slideshow>
 			<ul class="uk-slideshow uk-overlay-active">
 				<?php
-				$args=array('category_name'=>'promotions','order'=>'ASC', 'orderby'=>'id', 'numberposts'=>-1 );
-				$posts=get_posts($args);
+
 				foreach ($posts as $post):
 				setup_postdata($post);
 				?>
@@ -111,7 +113,7 @@
 	</div>
 </div>
 <!--КОНЕЦ promotions-->
-
+<?php endif; ?>
 <!--НАЧАЛО goods-->
 <div class="goods" id="goods">
 	<div class="uk-container uk-container-center">

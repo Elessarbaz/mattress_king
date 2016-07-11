@@ -41,11 +41,10 @@ get_header(); ?>
 			// полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
 		);
 		$categories = get_categories( $args );
-		//print_r($categories);
 		?>
 		<div class="uk-grid">
 			<div class="uk-width-medium-1-4 filter uk-hidden-small">
-				<div class="heading"><p>Акции</p></div>
+				<div class="heading"><p>Продукция</p></div>
 				<div class="uk-accordion" data-uk-accordion="{collapse: false}">
 					<!--li с классом "active" - текущий(выделенный) товар-->
 					<?php
@@ -76,7 +75,8 @@ get_header(); ?>
 				if ( have_posts() ) : ?>
 							<?php
 							while ( have_posts() ) : the_post();
-								get_template_part( 'template-parts/content', 'archive' );
+								$category=get_the_category();
+								if($category[0]->term_id!=4) get_template_part( 'template-parts/content', 'archive' );
 							endwhile;
 						endif;
 				?>
