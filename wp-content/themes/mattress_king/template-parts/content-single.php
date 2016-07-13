@@ -42,7 +42,7 @@
 		<div class="uk-width-medium-6-10 text-section">
 			<h3>Описание товара</h3>
 			<p>
-			<?=do_shortcode(get_the_excerpt())?>
+			<?=do_shortcode(get_the_content())?>
 			</p>
 
 			<!--НАЧАЛО горизонтальная тень-->
@@ -51,21 +51,21 @@
 			</div>
 			<!--КОНЕЦ горизонтальная тень-->
 
-			<div class="uk-text-center">
+<!--			<div class="uk-text-center">-->
 				<!--НАЧАЛО Кнопка скачать прайс-->
-				<a download="" href="<?=get_field('price')?>" class="button">Скачать прайс</a>
+<!--				<a download="" href="--><?//=get_field('price')?><!--" class="button">Скачать прайс</a>-->
 				<!--КОНЕЦ Кнопка скачать прайс-->
-			</div>
+<!--			</div>-->
 
 		</div>
 	</div>
 
 	<!--НАЧАЛО текст в нижней части-->
-	<div class="text-section-bottom">
+	<!--<div class="text-section-bottom">
 		<article>
-			<?=do_shortcode(get_the_content('')); ?>
+			<?/*=do_shortcode(get_the_content('')); */?>
 		</article>
-	</div>
+	</div>-->
 	<!--КОНЕЦ текст в нижней части-->
 
 </div>
